@@ -9,8 +9,9 @@ jobs:
   bulid:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: bazelbuild/setup-bazelisk@v3
+    - uses: actions/checkout@v4 
+#    - uses: bazelbuild/setup-bazelisk@v3 deprecated
+    - uses: bazel-contrib/setup-bazel@0.14.0
 #    - name: Mount bazel cache  # Optional
 #      uses: actions/cache@v4
 #      with:
