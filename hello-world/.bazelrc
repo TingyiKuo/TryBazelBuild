@@ -19,7 +19,7 @@ build --remote_download_toplevel
 build:remote-exec --dynamic_mode=off
 
 # Kubernetes will have a different host name than 'localhost'.
-build:remote-exec --remote_executor=grpc://192.168.1.33:8980
+build:remote-exec --remote_executor=grpc://10.121.114.72:8980
 # The Buildbarn worker can configure instance_name_prefix to create separate
 # execution bins within the cluster. Optional, but useful when trying new
 # worker configurations.
