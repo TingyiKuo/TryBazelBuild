@@ -1,1 +1,16 @@
 bazel_dep(name = "rules_cc", version = "0.0.17")
+bazel_dep(name = "platforms", version = "0.0.11")
+# For BB
+bazel_dep(name = "remote_config_cc")
+bazel_dep(name = "remote_config_sh")
+
+# Import toolchain repositories for remote executions, but register the
+# toolchains using --extra_toolchains on the command line to get precedence.
+local_path_override(
+    module_name = "remote_config_cc",
+    path = "tools/remote-toolchains/ubuntu-act-22-04/local_config_cc",
+)
+local_path_override(
+    module_name = "remote_config_sh",
+    path = "tools/remote-toolchains/ubuntu-act-22-04/local_config_sh",
+)

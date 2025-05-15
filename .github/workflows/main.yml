@@ -17,4 +17,6 @@ jobs:
 #      with:
 #        path: "~/.cache/bazel"
 #        key: bazel
-    - run: (cd hello-world && bazel build //...)
+#    - run: (cd hello-world && bazel build //...)
+    - run: (cd hello-world && bazel build --config=remote-ubuntu-22-04 //main:hello-world)
+
